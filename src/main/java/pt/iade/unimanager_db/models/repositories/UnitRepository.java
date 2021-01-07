@@ -13,7 +13,7 @@ public interface UnitRepository extends CrudRepository<Unit, Integer>{
     Iterable<Unit> findByName(String name);
     Iterable<Unit> findByNameLike(String name);
     Iterable<Unit> findByCreditsBetween(int min, int max);
-    Iterable<Unit> findByNameLikeAndByCreditsBetween(int min, int max, String name);
+    Iterable<Unit> findByNameLikeAndCreditsBetween(int min, int max, String name);
 
     String QueryFindUnitPlans = "Select u.sub_id AS id, u.sub_name AS name, "+
     "u.sub_credits AS credits, "+

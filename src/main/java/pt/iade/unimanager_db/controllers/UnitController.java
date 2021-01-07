@@ -82,7 +82,7 @@ public class UnitController {
             _creditMax = Integer.parseInt(creditsMax);
         } catch(NumberFormatException e){}
 
-        return unitRepository.findByNameLikeAndByCreditsBetween(_creditMin, _creditMax, name);
+        return unitRepository.findByNameLikeAndCreditsBetween(_creditMin, _creditMax, name);
     }
 
     @GetMapping(path ="/plans/", produces= MediaType.APPLICATION_JSON_VALUE)
@@ -107,5 +107,3 @@ public class UnitController {
         else return _unitPlan.get();
     }
 }
-
-    
